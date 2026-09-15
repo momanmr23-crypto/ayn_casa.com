@@ -1,0 +1,60 @@
+# AYN CASA image slots:  name | openverse search query | minimum width | pick index
+# Short queries work best (Openverse matches all words). Blank/comment lines ignored.
+# hero / studio
+hero|modern living room|1400|1
+studio-living|living room sofa|800|2
+studio-kitchen|kitchen interior|800|1
+studio-bedroom|bedroom interior|800|1
+studio-dining|dining room|800|1
+contact-consult|interior design|800|3
+contact-3d|interior design|800|5
+# projects
+project-worli-1|living room window|800|1
+project-worli-2|living room sofa|800|4
+project-golf-links-1|living room interior|800|1
+project-golf-links-2|hallway interior|800|1
+project-jubilee-1|living room|800|7
+project-jubilee-2|kitchen island|800|1
+project-penthouse-1|interior lighting|800|1
+project-penthouse-2|bedroom design|800|2
+project-kalyani-1|apartment interior|800|1
+project-kalyani-2|bedroom wardrobe|800|1
+project-boatclub-1|balcony apartment|800|1
+project-boatclub-2|dining area|800|2
+# service card backgrounds (ghosted images behind the six service cards)
+svc-space-planning|blueprint floor plan|900|1
+svc-3d|3d render interior|900|1
+svc-turnkey|renovation interior|900|1
+svc-modular|kitchen cabinets|900|1
+svc-ceiling|ceiling lamp|900|1
+svc-styling|sofa cushion|900|1
+# products - furniture
+sereno-console-1|console table|800|1
+sereno-console-2|hallway table decor|800|1
+rialto-table-1|dining table|800|1
+rialto-table-2|wood table|800|1
+norina-armchair-1|armchair|800|1
+norina-armchair-2|armchair fabric|800|1
+cadenza-sideboard-1|sideboard|800|1
+cadenza-sideboard-2|wooden cabinet|800|1
+linea-bookcase-1|bookcase|800|1
+linea-bookcase-2|bookshelf|800|1
+# products - lighting
+sospiro-pendant-1|pendant lamp|800|1
+sospiro-pendant-2|ceiling light lamp|800|1
+bruma-lamp-1|table lamp|800|1
+bruma-lamp-2|lamp light bulb|800|1
+# products - rugs and tableware
+orizzonte-rug-1|rug living room|800|1
+orizzonte-rug-2|carpet floor|800|1
+filigrana-rug-1|carpet wool|800|1
+veneto-plates-1|dinner plates|800|1
+fiore-glassware-1|wine glasses|800|1
+astro-cutlery-1|cutlery|800|1
+# products - textiles and lifestyle
+aura-plaid-1|wool blanket|800|1
+teodora-cushion-1|cushions|800|1
+petra-towels-1|towels|800|1
+pegaso-candle-1|candle|800|1
+vivid-objects-1|decorative object|800|1
+hunter-globe-1|globe|800|1
