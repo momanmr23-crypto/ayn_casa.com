@@ -344,6 +344,22 @@
       if (section) { io.observe(section); }
     });
   }
+  function brandTransitionInit() {
+    var heroBrand = $('.hero-brand');
+    var headerBrand = $('.header-brand');
+    if (!heroBrand || !headerBrand) { return; }
+    var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function update() {
+      var active = window.scrollY > 72;
+      document.body.classList.toggle('brand-scrolled', active);
+    }
+    if (reducedMotion) {
+      document.body.classList.add('brand-scrolled');
+      return;
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
   function instagramInit() {
     var track = $('[data-instagram-track]');
     if (!track) { return; }
@@ -1002,6 +1018,7 @@
     fillArt($('[data-art="hero"]'));
     lightboxInit();
     headerInit();
+    brandTransitionInit();
     heroInit();
     instagramInit();
     reviewsInit();
