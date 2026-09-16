@@ -59,7 +59,9 @@ p { margin: 0 0 1em; }
 .topbar a:hover { color: #fff; }
 .header { position: sticky; top: 0; z-index: 60; background: rgba(247, 244, 239, .93); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .header__inner { display: flex; align-items: center; gap: 20px; min-height: 68px; }
-.brand { font-family: var(--serif); font-size: 1.4rem; letter-spacing: .34em; text-transform: uppercase; white-space: nowrap; }
+.brand { display: inline-flex; align-items: center; width: 166px; height: 62px; white-space: nowrap; }
+.brand img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.footer .brand img { filter: invert(1); }
 .brand span { color: var(--brass); }
 .nav { display: flex; gap: 24px; margin-left: auto; align-items: center; }
 .nav a { font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; padding: 6px 0; border-bottom: 1px solid transparent; }
@@ -459,6 +461,19 @@ select.mini { padding: 7px 9px; font-size: .8rem; }
   .wrap { padding: 0 16px; }
   .section { padding: 52px 0; }
   .section--tight { padding: 38px 0; }
+  #inquiry { padding: 38px 0 44px; }
+  #inquiry > .wrap > .center h2 { margin-bottom: 10px; }
+  #inquiry > .wrap > .center .lede { font-size: .92rem; line-height: 1.55; }
+  #inquiry > .wrap > .grid { gap: 24px !important; margin-top: 26px !important; }
+  #inquiry .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
+  #inquiry .field { gap: 3px; min-width: 0; }
+  #inquiry .field label { color: #f1ece4; font-size: .66rem; letter-spacing: .1em; line-height: 1.25; }
+  #inquiry .field input, #inquiry .field select { height: 42px; padding: 8px 9px; font-size: 15px; }
+  #inquiry .field textarea { min-height: 92px; padding: 9px; font-size: 15px; }
+  #inquiry .error { min-height: .7em; margin: 0; font-size: .68rem; line-height: 1.1; }
+  #inquiry .inquiry-delivery { padding: 9px 10px; }
+  #inquiry .full.actions { gap: 8px; }
+  #inquiry .full.actions .btn { padding: 11px 12px; }
   h1 { font-size: clamp(1.9rem, 8.4vw, 2.6rem); }
   h2 { font-size: clamp(1.45rem, 6vw, 1.9rem); }
 
@@ -468,7 +483,7 @@ select.mini { padding: 7px 9px; font-size: .8rem; }
 
   /* header */
   .header__inner { min-height: 58px; gap: 10px; }
-  .brand { font-size: 1.08rem; letter-spacing: .22em; }
+  .brand { width: 128px; height: 52px; }
   .nav[data-open="true"] { padding: 14px 16px 20px; }
   .nav[data-open="true"] a { font-size: .95rem; padding: 10px 0; }
   .icon-btn { padding: 10px 8px; }
@@ -476,7 +491,13 @@ select.mini { padding: 7px 9px; font-size: .8rem; }
   .header__tools { margin-left: auto; }
 
   /* hero */
-  .hero__grid { grid-template-columns: 1fr; gap: 26px; padding: 46px 0 14px; }
+  .hero__grid { grid-template-columns: 1fr; gap: 34px; padding: 88px 0 22px; }
+  .hero__statement { padding: 32px 8px 0; }
+  .hero__statement .eyebrow { margin-bottom: 22px; }
+  .hero__statement h1 { margin-bottom: 18px; line-height: 1.08; }
+  .hero__statement > p:not(.hero__call) { line-height: 1.7; }
+  .hero__statement .actions { margin: 30px 0 20px; gap: 12px; }
+  .hero__call { padding-top: 2px; }
   .hero__portrait { height: clamp(320px, 100vw, 480px); aspect-ratio: auto; }
   .hero__tiles { position: relative; z-index: 1; grid-template-columns: 1fr; margin-top: 14px; }
   .section--ink#process > .wrap > .grid--4 { grid-template-columns: 1fr; }
@@ -539,7 +560,7 @@ select.mini { padding: 7px 9px; font-size: .8rem; }
 /* very small phones (iPhone SE, 320px Androids) */
 @media (max-width: 400px) {
   .wrap { padding: 0 13px; }
-  .brand { font-size: .95rem; letter-spacing: .16em; }
+  .brand { width: 112px; height: 46px; }
   .header__inner { gap: 5px; }
   .header__tools { gap: 2px; }
   .header__tools .icon-btn { padding-left: 6px; padding-right: 6px; font-size: .7rem; }
@@ -551,6 +572,9 @@ select.mini { padding: 7px 9px; font-size: .8rem; }
   .qty button { width: 36px; height: 40px; }
   .qty input { width: 46px; }
   .marquee__track { gap: 28px; }
+  #inquiry .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 9px; }
+  #inquiry .field input, #inquiry .field select { height: 40px; padding-left: 7px; padding-right: 7px; font-size: 14px; }
+  #inquiry .field label { font-size: .6rem; letter-spacing: .06em; }
   .spec li { align-items: flex-start; flex-wrap: wrap; gap: 4px 12px; }
   .spec li span:last-child { margin-left: auto; text-align: right; max-width: 100%; }
 }
