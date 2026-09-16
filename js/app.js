@@ -233,6 +233,22 @@
     $$('[data-inquiry-clear]').forEach(function (el) { el.hidden = totals.lines === 0; });
   }
 
+  function waInquiryHref() {
+    var b = D.brand;
+    var base = 'https://wa.me/' + b.whatsapp;
+    if (!inquiry.length) { return base; }
+    var out = ['Hello ' + b.name + '! I would like to inquire about these pieces from your collection:'];
+    inquiry.forEach(function (line, i) {
+      var p = findProduct(line.slug);
+      if (!p) { return; }
+      out.push((i + 1) + '. ' + p.name + (line.colour ? ' (' + line.colour + ')' : '') + ' x' + line.qty +
+        (typeof p.price === 'number' ? ' - ' + money(p.price) : ''));
+    });
+    out.push('');
+    out.push('Please share availability and details. Seen on: ' + window.location.href);
+    return base + '?text=' + encodeURIComponent(out.join('\n'));
+  }
+
   function showFloatBar() {
     var bar = $('[data-float-bar]');
     if (!bar) { return; }
@@ -242,6 +258,9 @@
     if (label) {
       label.textContent = totals.pieces + (totals.pieces === 1 ? ' piece' : ' pieces') + ' in your inquiry';
     }
+    /* the floating WhatsApp button always opens with the current inquiry list pre-filled */
+    var waLink = $('[data-wa-link]', bar);
+    if (waLink) { waLink.setAttribute('href', waInquiryHref()); }
   }
   /* ------------------------------ lightbox ------------------------------ */
   var lb = { el: null, img: null, list: [], index: 0 };
@@ -506,6 +525,25 @@
     if (!lbData[key]) { lbData[key] = items.map(function (it) { return it.src || art(it.label || '', 'g', 900, 1100); }); }
   }
 
+  function renderZigzagGallery(selector, items) {
+    var host = $(selector);
+    if (!host) { return; }
+    host.innerHTML = items.map(function (item, i) {
+      var flip = i % 2 === 1;
+      var media = '<figure class="zigzag__media" data-lb="studio-gallery" data-lb-index="' + i + '">' +
+        '<img src="' + item.src + '" alt="' + esc(item.title) + '" loading="lazy">' +
+        '</figure>';
+      var text = '<div class="zigzag__text">' +
+        '<span class="zigzag__num">' + (i < 9 ? '0' : '') + (i + 1) + '</span>' +
+        '<h3>' + esc(item.title) + '</h3>' +
+        '<p>' + esc(item.text) + '</p>' +
+        '</div>';
+      return '<div class="zigzag__row reveal' + (flip ? ' zigzag__row--flip' : '') + '">' +
+        (flip ? text + media : media + text) +
+        '</div>';
+    }).join('');
+  }
+
   /* ------------------------------ projects ------------------------------ */
   var projectFilter = 'all';
 
@@ -614,7 +652,7 @@
           '<button class="share-product" type="button" data-share-product="' + esc(p.slug) + '" aria-label="Share ' + esc(p.name) + '" title="Share product">' +
             '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2.1.8L8.9 12.8c.1-.3.1-.5.1-.8s0-.5-.1-.8l6.9-4.1c.6.5 1.3.8 2.1.8a3 3 0 1 0-2.9-3.7L8.1 8.3A3 3 0 1 0 8.1 15l6.9 4.1A3 3 0 1 0 18 16.1Z"/></svg>' +
           '</button>' +
-          '<button class="btn btn--link" type="button" data-view-product="' + esc(p.slug) + '">Photos and details</button>' +
+          '<button class="btn btn--ghost btn--sm" type="button" data-view-product="' + esc(p.slug) + '">Photos and details</button>' +
         '</div>' +
       '</div></article>';
   }
@@ -654,7 +692,16 @@
       count.textContent = 'Showing ' + slice.length + ' of ' + list.length + ' pieces';
     }
     var more = $('[data-c-more]');
-    if (more) { more.hidden = list.length <= col.shown; }
+    if (more) {
+      if (list.length <= PAGE_SIZE) {
+        more.hidden = true; /* not enough pieces to paginate */
+      } else {
+        more.hidden = false;
+        var allShown = col.shown >= list.length;
+        more.textContent = allShown ? 'Show less' : 'Show more';
+        more.setAttribute('data-mode', allShown ? 'less' : 'more');
+      }
+    }
     revealInit();
   }
 
@@ -957,8 +1004,18 @@
         return;
       }
       if (el.hasAttribute('data-c-more')) {
-        col.shown += PAGE_SIZE;
-        renderCollection();
+        /* decide from the live data, not from a stored attribute, so the
+         * toggle can never get out of sync with what is on screen */
+        var totalNow = filteredProducts().length;
+        if (col.shown >= totalNow) {
+          col.shown = PAGE_SIZE; /* everything was visible -> collapse */
+          renderCollection();
+          var grid = $('[data-products]');
+          if (grid) { grid.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        } else {
+          col.shown += PAGE_SIZE; /* expand */
+          renderCollection();
+        }
         return;
       }
 
@@ -1027,12 +1084,7 @@
     renderMarquee();
     renderStats();
     renderServices();
-    renderArtGallery('[data-studio-gallery]', [
-      { src: 'assets/project-golf-links-1.jpg', label: 'Living room' },
-      { src: 'assets/studio-kitchen.jpg', label: 'Kitchen' },
-      { src: 'assets/studio-bedroom.jpg', label: 'Bedroom' },
-      { src: 'assets/studio-dining.jpg', label: 'Dining' }
-    ], { meta: 'AYN Casa' });
+    renderZigzagGallery('[data-studio-gallery]', D.spaces);
 
     renderArtGallery('[data-contact-art]', [
       { src: 'assets/contact-consult.jpg', label: 'Consultation' },

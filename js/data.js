@@ -34,6 +34,17 @@ window.AYN.data = {
     'Modular kitchens', 'False ceiling and lighting', 'Bespoke furniture', 'Site supervision'
   ],
 
+  spaces: [
+    { src: 'assets/studio-living.jpg', title: 'Living room',
+      text: 'The room everything else is planned around. We fix the seating, the light and the sightlines first, then layer materials so it works for a quiet evening and a full house alike.' },
+    { src: 'assets/studio-kitchen.jpg', title: 'Kitchen',
+      text: 'Designed around how you actually cook. Work triangle, storage within reach, and finishes picked to survive daily use - not just for the photos.' },
+    { src: 'assets/studio-bedroom.jpg', title: 'Bedroom',
+      text: 'Quiet by design. Layered lighting, blackout options and storage that hides the clutter, so the room stays calm however loud the day was.' },
+    { src: 'assets/studio-dining.jpg', title: 'Dining',
+      text: 'Sized to your family and your guests. Lighting that dims for dinner, surfaces that age well, and a table that earns its place in the room.' }
+  ],
+
   services: [
     {
       id: 'space-planning', title: 'Space planning', image: 'assets/svc-space-planning.jpg',

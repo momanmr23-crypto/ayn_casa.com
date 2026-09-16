@@ -118,6 +118,12 @@ p { margin: 0 0 1em; }
 .btn--light:hover { background: #fff; border-color: #fff; color: var(--ink); }
 .btn--link { background: none; border: 0; border-bottom: 1px solid var(--line-2); padding: 4px 0; text-transform: uppercase; letter-spacing: .16em; font-size: .74rem; cursor: pointer; }
 .btn--link:hover { color: var(--brass-2); border-color: var(--brass); }
+/* link-style buttons on light card backgrounds must always keep dark, readable text */
+.card .btn--link, .section--paper .btn--link { color: var(--ink); background: transparent; }
+.card .btn--link:hover, .section--paper .btn--link:hover { color: var(--brass-2); }
+/* product-card secondary action: outlined ghost style so it stays visible on any surface */
+.card__foot .btn--ghost { border-color: var(--line-2); color: var(--ink); }
+.card__foot .btn--ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .btn--sm { padding: 9px 15px; font-size: .7rem; }
 .btn:disabled { opacity: .45; cursor: not-allowed; }
 .actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
@@ -303,6 +309,54 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 @media (max-width: 760px) {
   .gallery__grid { grid-template-columns: 1fr; }
   .gallery__title { font-size: .92rem; padding: 14px 14px 12px; }
+}
+
+/* ---------- zigzag studio gallery ---------- */
+.zigzag { display: grid; gap: clamp(26px, 4.5vw, 52px); margin-top: clamp(28px, 4.5vw, 46px); }
+.zigzag__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr);
+  gap: clamp(18px, 3.2vw, 42px);
+  align-items: center;
+}
+.zigzag__row--flip { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); }
+.zigzag__media {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: #ddd5c9;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+}
+.zigzag__media img {
+  width: 100%; height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform .55s var(--ease);
+}
+.zigzag__media:hover img { transform: scale(1.045); }
+.zigzag__num {
+  display: block;
+  font-size: .72rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin: 0 0 8px;
+}
+.zigzag__text h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); margin: 0 0 8px; }
+.zigzag__text p { color: var(--muted); margin: 0; max-width: 44ch; }
+
+/* mobile: zigzag survives — smaller alternating images, text matched to each side */
+@media (max-width: 700px) {
+  .zigzag__row, .zigzag__row--flip { display: flex; flex-direction: column; gap: 10px; }
+  .zigzag__media { width: 82%; }
+  .zigzag__row--flip .zigzag__media { margin-left: auto; }
+  .zigzag__row--flip .zigzag__text { text-align: right; margin-left: auto; }
+  .zigzag__row--flip .zigzag__text p { margin-left: auto; }
+  .zigzag__text p { max-width: none; }
 }
 @media (max-width: 1100px) {
   .instagram-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
