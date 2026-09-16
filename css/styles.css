@@ -349,14 +349,29 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 .zigzag__text h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); margin: 0 0 8px; }
 .zigzag__text p { color: var(--muted); margin: 0; max-width: 44ch; }
 
-/* mobile: zigzag survives — smaller alternating images, text matched to each side */
+/* slide-in on scroll: each block enters from its own side of the screen */
+.zigzag__row--from-left { --slide-x: -24px; }
+.zigzag__row--from-right { --slide-x: 24px; }
+.zigzag__row .zigzag__media,
+.zigzag__row .zigzag__text {
+  opacity: 0;
+  transform: translateX(var(--slide-x, 0px));
+  transition: opacity .65s var(--ease), transform .65s var(--ease);
+}
+.zigzag__row .zigzag__text { transition-delay: .12s; }
+.zigzag__row.is-visible .zigzag__media,
+.zigzag__row.is-visible .zigzag__text { opacity: 1; transform: translateX(0); }
+
+/* mobile: clean full-width stack — the zigzag rhythm comes from the slide-in direction */
 @media (max-width: 700px) {
-  .zigzag__row, .zigzag__row--flip { display: flex; flex-direction: column; gap: 10px; }
-  .zigzag__media { width: 82%; }
-  .zigzag__row--flip .zigzag__media { margin-left: auto; }
-  .zigzag__row--flip .zigzag__text { text-align: right; margin-left: auto; }
-  .zigzag__row--flip .zigzag__text p { margin-left: auto; }
+  .zigzag__row, .zigzag__row--flip { display: flex; flex-direction: column; gap: 8px; }
+  .zigzag__media { width: 100%; }
+  .zigzag__row--flip .zigzag__media { margin-left: 0; }
+  .zigzag__row--flip .zigzag__text { text-align: left; margin-left: 0; }
+  .zigzag__row--flip .zigzag__text p { margin-left: 0; }
   .zigzag__text p { max-width: none; }
+  .zigzag__row--from-left { --slide-x: -56px; }
+  .zigzag__row--from-right { --slide-x: 56px; }
 }
 @media (max-width: 1100px) {
   .instagram-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }

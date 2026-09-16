@@ -530,6 +530,7 @@
     if (!host) { return; }
     host.innerHTML = items.map(function (item, i) {
       var flip = i % 2 === 1;
+      var dirClass = flip ? ' zigzag__row--from-right' : ' zigzag__row--from-left';
       var media = '<figure class="zigzag__media" data-lb="studio-gallery" data-lb-index="' + i + '">' +
         '<img src="' + item.src + '" alt="' + esc(item.title) + '" loading="lazy">' +
         '</figure>';
@@ -538,7 +539,7 @@
         '<h3>' + esc(item.title) + '</h3>' +
         '<p>' + esc(item.text) + '</p>' +
         '</div>';
-      return '<div class="zigzag__row reveal' + (flip ? ' zigzag__row--flip' : '') + '">' +
+      return '<div class="zigzag__row reveal' + (flip ? ' zigzag__row--flip' : '') + dirClass + '">' +
         (flip ? text + media : media + text) +
         '</div>';
     }).join('');
