@@ -179,4 +179,4 @@ Given the client may take the design elsewhere, in order of importance:
 
 **Contact for licensing or infringement reports**
 Abdul Rehman Khan — AYN CASA Interior Design Studio
-Email: kabdulrehman8169@gmail.com · Phone / WhatsApp: +91 88794 04352
+Email: kabdulrehman8169@gmail.com · Phone / WhatsApp: +91 72083 80553

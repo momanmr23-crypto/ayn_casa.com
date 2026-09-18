@@ -24,7 +24,7 @@ If you find a security issue (e.g. XSS via a form field, a malicious link
 injection, or anything else):
 
 - **Email:** kabdulrehman8169@gmail.com
-- **WhatsApp:** +91 88794 04352
+- **WhatsApp:** +91 72083 80553
 
 Please include a description, steps to reproduce, and — if possible — a
 suggested fix. Do not publicly disclose the issue before it is fixed.

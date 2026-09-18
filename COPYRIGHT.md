@@ -23,9 +23,10 @@ design studio.
   open licences (see `assets/CREDITS.md` for attribution details) — replace
   them with the studio's own photography before any commercial evaluation
 
-## Business contact
-- **Owner / Designer:** Abdul Rehman Khan — AYN CASA Interior Design Studio
-- **Phone / WhatsApp:** +91 88794 04352
+## Contact (owner / author)
+- **Owner / Designer:** Abdul Rehman Khan
+- **Phone / WhatsApp:** +91 72083 80553
+- **Email:** kabdulrehman8169@gmail.com
 
 ## Legal
 Unauthorized copying or commercial reuse of this work may result in legal

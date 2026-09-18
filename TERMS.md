@@ -37,7 +37,7 @@ Links to WhatsApp, Instagram, and telephone are provided for convenience.
 The studio is not responsible for the content of third-party apps or sites.
 
 ## 7. Contact
-- **Phone / WhatsApp:** +91 88794 04352
+- **Phone / WhatsApp:** +91 72083 80553
 - **Owner:** Abdul Rehman Khan — AYN CASA Interior Design Studio
 
 *Effective date: February 2026*
