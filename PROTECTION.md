@@ -1,6 +1,6 @@
 # Protection & Enforcement Playbook
 
-**Owner:** Abdul Rehman Khan — AYN CASA Interior Design Studio
+**Developer / Author:** Abdul Rehman Khan · **Client project:** AYN CASA — Interior Design Studio
 **Last updated:** February 2026
 
 This document explains how the work is protected, what has already been put in
@@ -14,6 +14,28 @@ place, and exactly what to do if someone copies the site.
 >
 > *This is practical guidance, not legal advice. For litigation or a formal
 > trademark filing, consult a lawyer.*
+
+---
+
+## Status of this build
+
+This is a **preview / demonstration build**, created by Abdul Rehman Khan to
+show the concept to a prospective client. It has **not been sold, delivered,
+assigned, or handed over**, and no payment or written agreement is recorded.
+The developer is **not** an employee of, a partner in, or a work-for-hire
+contractor of the studio. It is an independently produced commission demo.
+
+Consequences that follow from that:
+
+- Copyright in the **design and code remains with the developer** until a written
+  assignment says otherwise — see `COPYRIGHT.md`.
+- The prospective client holds **no licence to reuse, redeploy, resell, or hand
+  this build to another developer**, unless the developer grants one in writing.
+- The **"AYN CASA" name, logo and brand** shown in this build belong to the
+  prospective client. The developer makes no claim to them, and grants no rights
+  to use the build's design and code in connection with them.
+- Placeholder photography is licensed stock and must be replaced with the
+  client's own photos before any commercial launch (see `assets/CREDITS.md`).
 
 ---
 

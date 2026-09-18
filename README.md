@@ -1,6 +1,6 @@
 ﻿# AYN CASA - single page website (no backend)
 
-> **Owner / Author:** Abdul Rehman Khan · **Studio:** AYN CASA Interior Design Studio
+> **Developer / Author:** Abdul Rehman Khan · **Client:** AYN CASA — Interior Design Studio
 > **Contact:** +91 72083 80553 (WhatsApp and calls) · **License:** see `COPYRIGHT.md`
 
 A one-page site for an interior design studio: **Interior Design | Turning Houses into Homes**.

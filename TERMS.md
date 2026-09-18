@@ -1,7 +1,8 @@
 # Terms of Use
 
-This website is operated by **AYN CASA — Interior Design Studio**, owned by
-**Abdul Rehman Khan**. By using ayn_casa.com you agree to the following.
+This website is operated by **AYN CASA — Interior Design Studio**. It was
+designed and developed by **Abdul Rehman Khan**. By using ayn_casa.com you
+agree to the following.
 
 ## 1. Purpose of this site
 This site showcases interior design services (space planning, 3D views,
@@ -28,7 +29,8 @@ provided directly by the studio. Website content is for general information
 and is not a professional consultation.
 
 ## 5. Intellectual property
-The site's design, code, and branding belong to Abdul Rehman Khan — see
+The site's design and code belong to Abdul Rehman Khan; the AYN CASA name,
+logo and brand belong to the studio — see
 `COPYRIGHT.md`. Copying or reusing the design or code without permission is
 not allowed.
 
@@ -37,7 +39,9 @@ Links to WhatsApp, Instagram, and telephone are provided for convenience.
 The studio is not responsible for the content of third-party apps or sites.
 
 ## 7. Contact
-- **Phone / WhatsApp:** +91 72083 80553
-- **Owner:** Abdul Rehman Khan — AYN CASA Interior Design Studio
+- **For the studio** (services, quotes, projects): use the phone, WhatsApp or
+  Instagram links shown on this website.
+- **For the website itself** (design and code): Abdul Rehman Khan,
+  +91 72083 80553.
 
 *Effective date: February 2026*

@@ -29,4 +29,4 @@ injection, or anything else):
 Please include a description, steps to reproduce, and — if possible — a
 suggested fix. Do not publicly disclose the issue before it is fixed.
 
-**Owner / maintainer:** Abdul Rehman Khan
+**Developer / maintainer:** Abdul Rehman Khan
