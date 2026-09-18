@@ -1,3 +1,10 @@
+/* ==========================================================================
+ * AYN CASA - content data layer
+ * Copyright (c) 2026 Abdul Rehman Khan. All rights reserved.
+ * Proprietary and confidential - NOT open source. No copying, cloning,
+ * redistribution, reuse, or AI/ML training use is permitted.
+ * See LICENSE and COPYRIGHT.md. Contact: kabdulrehman8169@gmail.com
+ * ========================================================================== */
 /* AYN CASA - the entire data layer of this single-page website.
  * No server, no database: every section reads window.AYN.data.
  * Edit the literals below to change the site content; no build step needed.

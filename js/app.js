@@ -1,3 +1,10 @@
+/* ==========================================================================
+ * AYN CASA - site behaviour
+ * Copyright (c) 2026 Abdul Rehman Khan. All rights reserved.
+ * Proprietary and confidential - NOT open source. No copying, cloning,
+ * redistribution, reuse, or AI/ML training use is permitted.
+ * See LICENSE and COPYRIGHT.md. Contact: kabdulrehman8169@gmail.com
+ * ========================================================================== */
 /* AYN CASA - every bit of site behaviour lives in this file.
  * No framework, no build step, no API, no server: pure browser JavaScript.
  * Content lives in js/data.js; this file only renders and wires it up.

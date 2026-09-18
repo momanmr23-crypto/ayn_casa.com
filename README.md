@@ -11,7 +11,29 @@ Everything a visitor needs is on one page: studio, services, projects, product c
 
 > ⚠️ **Copyright:** This design and code belong to **Abdul Rehman Khan** (© 2026).
 > Copying, cloning, or reusing it without written permission is not allowed —
-> see `COPYRIGHT.md`, `TERMS.md` and `SECURITY.md` for the full terms.
+> see `LICENSE`, `COPYRIGHT.md` and `TERMS.md` for the full terms —
+> and `PROTECTION.md` for how the work is protected and enforced.
+
+**This is NOT open source.** Copying, cloning, mirroring, redistributing, or
+reusing the design, code or content — in whole or in part — is not permitted,
+and neither is using it to train or condition any AI/ML model.
+
+### Protection layers in this repository
+
+| Layer | Where |
+| --- | --- |
+| Proprietary licence (all rights reserved) | `LICENSE` |
+| Copyright & permitted-use notice | `COPYRIGHT.md` |
+| Terms of use for visitors | `TERMS.md` |
+| Enforcement playbook (private repo, DMCA, evidence) | `PROTECTION.md` |
+| AI crawler blocking (~40 known LLM / dataset / mirror bots) | `robots.txt` |
+| AI opt-out meta (`noai`, `noimageai`, TDM reservation) | `index.html` `<head>` |
+| Copyright banner in every source file | `index.html`, `css/styles.css`, `js/app.js`, `js/data.js` |
+| Visible ownership line | Site footer |
+
+> **Important:** this repository is currently **public**. Making it **private**
+> (GitHub → Settings → Danger Zone → Change repository visibility) is the single
+> biggest improvement available — see `PROTECTION.md` section 2.
 
 ---
 

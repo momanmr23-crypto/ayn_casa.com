@@ -1,3 +1,10 @@
+/* ==========================================================================
+ * AYN CASA - stylesheet
+ * Copyright (c) 2026 Abdul Rehman Khan. All rights reserved.
+ * Proprietary and confidential - NOT open source. No copying, cloning,
+ * redistribution, reuse, or AI/ML training use is permitted.
+ * See LICENSE and COPYRIGHT.md. Contact: kabdulrehman8169@gmail.com
+ * ========================================================================== */
 /* AYN CASA - one stylesheet. No framework, no build step, no CDN. */
 /* Cormorant Garamond (OFL licence) - self-hosted display font, latin subset only. */
 @font-face { font-family: "Cormorant Garamond"; src: url("../fonts/cormorant-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
@@ -226,6 +233,7 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 .footer ul { list-style: none; margin: 0; padding: 0; }
 .footer li + li { margin-top: 8px; }
 .footer__base { display: flex; gap: 18px; justify-content: space-between; flex-wrap: wrap; border-top: 1px solid rgba(255, 255, 255, .14); margin-top: 40px; padding-top: 20px; font-size: .74rem; letter-spacing: .06em; }
+.footer__owner { color: rgba(255, 255, 255, .55); }
 
 /* ---------- overlays ---------- */
 .overlay { position: fixed; inset: 0; z-index: 90; background: rgba(10, 8, 7, .55); display: none; }
